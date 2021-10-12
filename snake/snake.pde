@@ -86,6 +86,13 @@ for(int i = 0; i < snaketailx.size(); i++){
 if(x == snaketailx.get(i) && y == snaketaily.get(i)){
   dead = true;
   println("you are dead");
+  
+String s = "Game Over, press any key to restart";
+fill(255, 0, 0);
+text(s, 300, 400, 100); 
+noFill();
+
+keyReleased();
 
 restart();
 
@@ -146,5 +153,14 @@ void restart() {
  x = 40;
 y = 40;
 p = 0;
+  noLoop();
+}
+
+void keyReleased(){
+
+  if(keyPressed){
+    loop();
+  }
+  
   
 }
